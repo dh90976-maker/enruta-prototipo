@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EnRuta - GA5-AA1-EV01</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #F1F5F9; color: #0B192C; }
+    .phone { width: 290px; min-height: 590px; background: #FFF; border-radius: 30px; border: 6px solid #0B192C; box-shadow: 0 10px 24px rgba(11,25,44,.1); overflow: hidden; display: flex; flex-direction: column; }
+    .wire { width: 290px; min-height: 590px; background: #FFF; border-radius: 30px; border: 6px solid #64748B; overflow: hidden; display: flex; flex-direction: column; }
+  </style>
+</head>
+<body class="pb-12">
+
+  <!-- BARRA SUPERIOR -->
+  <header class="bg-white border-b border-slate-200 px-5 py-3 sticky top-0 z-30 mb-6 shadow-sm">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2.5">
+        <span class="bg-[#0B192C] text-white text-xs font-bold px-2.5 py-1 rounded">GA5-AA1-EV01</span>
+        <div>
+          <h1 class="text-sm font-bold">EnRuta — Prototipado de Software</h1>
+          <p class="text-[11px] text-slate-500">Plataforma de Domicilios Inteligente · Estándar ISO/IEC 25010</p>
+        </div>
+      </div>
+
+      <div class="flex bg-slate-100 p-1 rounded-xl border border-slate-200">
+        <button onclick="setMode('wireframe')" id="btn-wireframe" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 transition">1. Wireframe</button>
+        <button onclick="setMode('mockup')" id="btn-mockup" class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-[#0B192C] text-white shadow-sm transition">2. Mockup</button>
+        <button onclick="setMode('prototype')" id="btn-prototype" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 transition">3. Prototipo Navegable</button>
+      </div>
+
+      <div class="flex items-center gap-1.5 text-[11px] font-mono">
+        <span class="flex items-center gap-1 bg-slate-50 border px-2 py-1 rounded-full"><i class="w-2 h-2 rounded-full bg-[#0B192C]"></i>#0B192C</span>
+        <span class="flex items-center gap-1 bg-slate-50 border px-2 py-1 rounded-full"><i class="w-2 h-2 rounded-full bg-[#4E8D38]"></i>#4E8D38</span>
+        <span class="flex items-center gap-1 bg-slate-50 border px-2 py-1 rounded-full"><i class="w-2 h-2 rounded-full bg-[#DC2626]"></i>#DC2626</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4">
+
+    <!-- 1. WIREFRAME -->
+    <section id="view-wireframe" class="hidden">
+      <div class="bg-white p-4 rounded-xl border mb-6 flex justify-between items-center shadow-sm">
+        <div>
+          <h2 class="text-sm font-bold text-slate-800">1. Wireframe — Baja Fidelidad (Estructura y Jerarquía)</h2>
+          <p class="text-xs text-slate-500">Escala de grises sin estilos de marca para validar arquitectura de información.</p>
+        </div>
+        <span class="text-[11px] font-semibold bg-slate-100 px-3 py-1 rounded-full border">4 Pantallas</span>
+      </div>
+      <div class="flex flex-wrap justify-center gap-6">
+        <div class="flex flex-col items-center"><span class="text-xs font-bold text-slate-500 mb-2">WF-01 · LOGIN</span>
+          <div class="wire p-5 justify-between">
+            <div>
+              <div class="w-36 h-12 mx-auto mb-5 bg-slate-100 border-2 border-dashed border-slate-400 flex items-center justify-center text-[11px] font-bold text-slate-500">LOGO ENRUTA</div>
+              <div class="h-5 w-32 bg-slate-300 rounded mb-2"></div><div class="h-3 w-48 bg-slate-200 rounded mb-5"></div>
+              <div class="mb-3"><div class="h-3 w-28 bg-slate-300 rounded mb-1"></div><div class="h-10 border-2 border-slate-300 rounded-lg bg-slate-50"></div></div>
+              <div class="mb-5"><div class="h-3 w-24 bg-slate-300 rounded mb-1"></div><div class="h-10 border-2 border-slate-300 rounded-lg bg-slate-50"></div></div>
+              <div class="h-10 bg-slate-500 rounded-lg flex items-center justify-center text-white text-xs font-bold">INICIAR SESIÓN</div>
+            </div>
+            <div class="h-3 w-44 bg-slate-200 rounded mx-auto"></div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center"><span class="text-xs font-bold text-slate-500 mb-2">WF-02 · REGISTRO</span>
+          <div class="wire p-5">
+            <div class="w-28 h-8 mx-auto mb-3 bg-slate-100 border-2 border-dashed border-slate-400 flex items-center justify-center text-[10px] font-bold text-slate-500">LOGO</div>
+            <div class="h-5 w-28 bg-slate-300 rounded mb-3"></div>
+            <div class="space-y-2.5 mb-4">
+              <div class="h-9 border-2 border-slate-300 rounded-lg bg-slate-50"></div>
+              <div class="h-9 border-2 border-slate-300 rounded-lg bg-slate-50"></div>
+              <div class="h-9 border-2 border-slate-300 rounded-lg bg-slate-50"></div>
+              <div class="h-9 border-2 border-slate-300 rounded-lg bg-slate-50"></div>
+            </div>
+            <div class="h-10 bg-slate-500 rounded-lg flex items-center justify-center text-white text-xs font-bold">REGISTRARME</div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center"><span class="text-xs font-bold text-slate-500 mb-2">WF-03 · ERROR</span>
+          <div class="wire p-5">
+            <div class="w-28 h-8 mx-auto mb-2 bg-slate-100 border-2 border-dashed border-slate-400 flex items-center justify-center text-[10px] font-bold text-slate-500">LOGO</div>
+            <div class="h-9 bg-slate-200 border-2 border-slate-500 rounded-lg mb-2.5 flex items-center px-3 text-[10px] font-bold text-slate-600">[!] ALERTA ERROR</div>
+            <div class="space-y-2.5 mb-4">
+              <div class="h-8 border-2 border-slate-300 rounded-lg"></div>
+              <div class="h-8 border-2 border-slate-600 rounded-lg bg-slate-100"></div>
+              <div class="h-8 border-2 border-slate-600 rounded-lg bg-slate-100"></div>
+            </div>
+            <div class="h-10 bg-slate-500 rounded-lg flex items-center justify-center text-white text-xs font-bold">REINTENTAR</div>
+          </div>
+        </div>
+        <div class="flex flex-col items-center"><span class="text-xs font-bold text-slate-500 mb-2">WF-04 · ÉXITO</span>
+          <div class="wire p-5 justify-between items-center text-center">
+            <div class="w-28 h-8 bg-slate-100 border-2 border-dashed border-slate-400 flex items-center justify-center text-[10px] font-bold text-slate-500">LOGO</div>
+            <div><div class="w-14 h-14 rounded-full bg-slate-200 border-2 border-slate-400 flex items-center justify-center mx-auto mb-2 font-bold">✓</div><div class="h-4 w-36 bg-slate-300 rounded mx-auto"></div></div>
+            <div class="h-10 w-full bg-slate-500 rounded-lg flex items-center justify-center text-white text-xs font-bold">CONTINUAR</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. MOCKUP -->
+    <section id="view-mockup">
+      <div class="bg-white p-4 rounded-xl border mb-6 flex justify-between items-center shadow-sm">
+        <div>
+          <h2 class="text-sm font-bold">2. Mockup — Alta Fidelidad Visual (Identidad EnRuta)</h2>
+          <p class="text-xs text-slate-500">Logotipo oficial, tipografía Inter y paleta estricta de 3 colores (#0B192C, #4E8D38, #DC2626).</p>
+        </div>
+        <span class="text-[11px] font-semibold bg-[#4E8D38]/10 text-[#4E8D38] px-3 py-1 rounded-full border border-[#4E8D38]/30">4 Pantallas Estáticas</span>
+      </div>
+
+      <!-- Contenedor adaptativo con flex-wrap y espaciado perfecto -->
+      <div class="flex flex-wrap justify-center items-stretch gap-6">
+        
+        <!-- MK-01 -->
+        <div class="flex flex-col items-center">
+          <span class="text-[11px] font-bold mb-2">MK-01 · LOGIN ENRUTA</span>
+          <div class="phone p-5 justify-between">
+            <div>
+              <div class="enruta-logo flex justify-center mb-4 pt-1" data-w="175"></div>
+              <h3 class="text-base font-bold">Iniciar Sesión</h3>
+              <p class="text-[11px] text-slate-500 mb-3">Ingresa tus credenciales para gestionar tus pedidos.</p>
+              <label class="block text-[11px] font-bold mb-1">Correo electrónico</label>
+              <div class="h-9 px-3 mb-2.5 rounded-lg border border-slate-300 flex items-center text-xs">laura.martinez@enruta.co</div>
+              <label class="block text-[11px] font-bold mb-1">Contraseña</label>
+              <div class="h-9 px-3 mb-2 rounded-lg border border-slate-300 flex items-center justify-between text-xs"><span>••••••••••••</span><span class="text-slate-400">👁</span></div>
+              <div class="text-right mb-4"><span class="text-[11px] font-bold text-[#4E8D38]">¿Olvidaste tu contraseña?</span></div>
+              <div class="h-10 bg-[#4E8D38] rounded-lg flex items-center justify-center text-white text-xs font-bold">Iniciar Sesión</div>
+            </div>
+            <p class="text-center text-[11px] text-slate-500">¿No tienes cuenta? <b class="text-[#0B192C] underline">Regístrate aquí</b></p>
+          </div>
+        </div>
+
+        <!-- MK-02 -->
+        <div class="flex flex-col items-center">
+          <span class="text-[11px] font-bold mb-2">MK-02 · REGISTRO DE USUARIO</span>
+          <div class="phone p-5 justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-[11px] font-bold">← Volver</span>
+                <div class="enruta-logo" data-w="120"></div>
+              </div>
+              <h3 class="text-sm font-bold">Crear Cuenta</h3>
+              <p class="text-[11px] text-slate-500 mb-2">Completa tus datos personales.</p>
+              <div class="space-y-2">
+                <div><label class="block text-[10px] font-bold">Nombres</label><div class="h-8 px-2.5 rounded-lg border border-slate-300 flex items-center text-xs">Laura Sofía</div></div>
+                <div><label class="block text-[10px] font-bold">Apellidos</label><div class="h-8 px-2.5 rounded-lg border border-slate-300 flex items-center text-xs">Martínez Rojas</div></div>
+                <div><label class="block text-[10px] font-bold">Cédula de ciudadanía</label><div class="h-8 px-2.5 rounded-lg border border-slate-300 flex items-center text-xs">1107524890</div></div>
+                <div><label class="block text-[10px] font-bold">Fecha de nacimiento</label><div class="h-8 px-2.5 rounded-lg border border-slate-300 flex items-center justify-between text-xs"><span>14 / 08 / 1998</span><span>📅</span></div></div>
+              </div>
+              <div class="flex items-start gap-1.5 my-2.5">
+                <span class="w-3.5 h-3.5 rounded bg-[#4E8D38] text-white flex items-center justify-center text-[9px] font-bold shrink-0">✓</span>
+                <span class="text-[9.5px] text-slate-600 leading-tight">Acepto la política de tratamiento de datos.</span>
+              </div>
+              <div class="h-9 bg-[#4E8D38] rounded-lg flex items-center justify-center text-white text-xs font-bold">Registrarme</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MK-03 -->
+        <div class="flex flex-col items-center">
+          <span class="text-[11px] font-bold text-[#DC2626] mb-2">MK-03 · MANEJO DE ERRORES</span>
+          <div class="phone p-5 justify-between">
+            <div>
+              <div class="enruta-logo flex justify-center mb-2" data-w="130"></div>
+              <div class="bg-red-50 border border-[#DC2626] rounded-lg p-2 mb-2 flex items-center gap-1.5">
+                <span class="w-3.5 h-3.5 rounded-full bg-[#DC2626] text-white flex items-center justify-center text-[9px] font-bold shrink-0">!</span>
+                <p class="text-[9.5px] font-semibold text-[#DC2626] leading-tight">Corrige los campos resaltados antes de continuar.</p>
+              </div>
+              <div class="space-y-1.5">
+                <div><label class="block text-[9.5px] font-bold">Nombres</label><div class="h-7 px-2.5 rounded-lg border border-slate-300 flex items-center text-xs">Laura Sofía</div></div>
+                <div>
+                  <label class="block text-[9.5px] font-bold text-[#DC2626]">Cédula de ciudadanía *</label>
+                  <div class="h-7 px-2.5 rounded-lg border-2 border-[#DC2626] bg-red-50/30 flex items-center justify-between text-xs text-[#DC2626] font-semibold"><span>1107-ABC</span><span>!</span></div>
+                  <p class="text-[9px] text-[#DC2626]">Ingresa solo números (6 a 10 dígitos).</p>
+                </div>
+                <div>
+                  <label class="block text-[9.5px] font-bold text-[#DC2626]">Fecha de nacimiento *</label>
+                  <div class="h-7 px-2.5 rounded-lg border-2 border-[#DC2626] bg-red-50/30 flex items-center justify-between text-xs text-[#DC2626] font-semibold"><span>22 / 09 / 2012</span><span>!</span></div>
+                  <p class="text-[9px] text-[#DC2626]">Debes ser mayor de 18 años.</p>
+                </div>
+              </div>
+              <div class="h-9 bg-[#4E8D38] opacity-90 rounded-lg flex items-center justify-center text-white text-xs font-bold mt-2.5">Registrarme</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MK-04 -->
+        <div class="flex flex-col items-center">
+          <span class="text-[11px] font-bold text-[#4E8D38] mb-2">MK-04 · CONFIRMACIÓN EXITOSA</span>
+          <div class="phone p-5 justify-between items-center text-center">
+            <div class="enruta-logo flex justify-center pt-1" data-w="160"></div>
+            <div>
+              <div class="w-14 h-14 rounded-full bg-[#4E8D38]/15 border-2 border-[#4E8D38] text-[#4E8D38] flex items-center justify-center text-2xl font-bold mx-auto mb-3">✓</div>
+              <h3 class="text-base font-bold mb-1.5">¡Bienvenido a EnRuta!</h3>
+              <p class="text-[11px] text-slate-500 leading-relaxed">Tu registro fue exitoso. Ya puedes gestionar domicilios inteligentes en tiempo real.</p>
+            </div>
+            <div class="h-10 w-full bg-[#4E8D38] rounded-lg flex items-center justify-center text-white text-xs font-bold">Ir al Panel Principal</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. PROTOTIPO NAVEGABLE -->
+    <section id="view-prototype" class="hidden">
+      <div class="bg-white p-4 rounded-xl border mb-6 flex justify-between items-center shadow-sm">
+        <div>
+          <h2 class="text-sm font-bold">3. Prototipo Navegable — Simulación Interactiva</h2>
+          <p class="text-xs text-slate-500">Prueba la navegación, validación de errores (#DC2626) y confirmación exitosa (#4E8D38).</p>
+        </div>
+        <button onclick="goScreen('login')" class="bg-[#0B192C] text-white text-xs font-semibold px-4 py-2 rounded-lg">Reiniciar Flujo</button>
+      </div>
+
+      <div class="flex flex-wrap justify-center items-start gap-8">
+        <div class="phone p-5 justify-between">
+          <div class="enruta-logo flex justify-center mb-2" data-w="160"></div>
+
+          <div id="proto-login" class="flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-base font-bold">Iniciar Sesión</h3>
+              <p class="text-xs text-slate-500 mb-3">Accede a tu cuenta de EnRuta.</p>
+              <label class="block text-xs font-semibold mb-1">Correo electrónico</label>
+              <input id="login-email" type="email" value="laura.martinez@enruta.co" class="w-full h-9 px-3 mb-2.5 rounded-lg border border-slate-300 text-xs" />
+              <label class="block text-xs font-semibold mb-1">Contraseña</label>
+              <input id="login-pass" type="password" value="EnRuta2026" class="w-full h-9 px-3 mb-2 rounded-lg border border-slate-300 text-xs" />
+              <p id="login-error" class="hidden text-[11px] text-[#DC2626] font-semibold mb-2">⚠ Ingresa datos válidos.</p>
+              <button onclick="submitLogin()" class="w-full h-10 mt-1 bg-[#4E8D38] text-white text-xs font-bold rounded-lg">Iniciar Sesión</button>
+            </div>
+            <p class="text-center text-xs text-slate-500">¿No tienes cuenta? <button onclick="goScreen('register')" class="font-bold text-[#0B192C] underline">Regístrate aquí</button></p>
+          </div>
+
+          <div id="proto-register" class="hidden flex-1 flex flex-col justify-between">
+            <div>
+              <h3 class="text-sm font-bold mb-1.5">Crear Cuenta</h3>
+              <div id="reg-banner" class="hidden bg-red-50 border border-[#DC2626] text-[#DC2626] text-[10px] font-semibold p-1.5 rounded-lg mb-2">⚠ Corrige los campos en rojo.</div>
+              <div class="space-y-1.5">
+                <div><label class="block text-[10px] font-semibold">Nombres</label><input id="reg-name" type="text" placeholder="Ej: Laura Sofía" class="w-full h-8 px-2.5 rounded-lg border border-slate-300 text-xs" /></div>
+                <div><label class="block text-[10px] font-semibold">Apellidos</label><input id="reg-last" type="text" placeholder="Ej: Martínez Rojas" class="w-full h-8 px-2.5 rounded-lg border border-slate-300 text-xs" /></div>
+                <div>
+                  <label class="block text-[10px] font-semibold">Cédula</label>
+                  <input id="reg-id" type="text" placeholder="6-10 dígitos" class="w-full h-8 px-2.5 rounded-lg border border-slate-300 text-xs" />
+                  <p id="err-id" class="hidden text-[9.5px] text-[#DC2626]">Solo números (6-10 dígitos).</p>
+                </div>
+                <div>
+                  <label class="block text-[10px] font-semibold">Fecha de nacimiento</label>
+                  <input id="reg-date" type="date" class="w-full h-8 px-2.5 rounded-lg border border-slate-300 text-xs" />
+                  <p id="err-date" class="hidden text-[9.5px] text-[#DC2626]">Debes ser mayor de 18 años.</p>
+                </div>
+              </div>
+              <button onclick="submitRegister()" class="w-full h-10 mt-3 bg-[#4E8D38] text-white text-xs font-bold rounded-lg">Registrarme</button>
+            </div>
+            <button onclick="goScreen('login')" class="text-center text-xs text-slate-500 underline mt-2">← Volver al Login</button>
+          </div>
+
+          <div id="proto-success" class="hidden flex-1 flex flex-col justify-between items-center text-center py-4">
+            <div class="my-auto">
+              <div class="w-14 h-14 rounded-full bg-[#4E8D38]/15 border-2 border-[#4E8D38] text-[#4E8D38] flex items-center justify-center text-2xl font-bold mx-auto mb-3">✓</div>
+              <h3 class="text-base font-bold mb-1.5">¡Bienvenido a EnRuta!</h3>
+              <p class="text-xs text-slate-500">Tu registro fue exitoso. Ya puedes gestionar domicilios.</p>
+            </div>
+            <button onclick="goScreen('login')" class="w-full h-10 bg-[#4E8D38] text-white text-xs font-bold rounded-lg">Ir al Panel Principal</button>
+          </div>
+        </div>
+
+        <div class="bg-white p-6 rounded-2xl border max-w-md space-y-3 shadow-sm">
+          <h3 class="text-sm font-bold">Pruebas Interactivas del Flujo</h3>
+          <button onclick="simulateError()" class="w-full text-left p-3.5 rounded-xl border border-[#DC2626]/40 bg-red-50/50 hover:bg-red-50">
+            <div class="text-xs font-bold text-[#DC2626]">1. Disparar Estado de Error (#DC2626)</div>
+            <div class="text-[11px] text-slate-600">Simula cédula con letras y menor de edad.</div>
+          </button>
+          <button onclick="simulateValid()" class="w-full text-left p-3.5 rounded-xl border border-[#4E8D38]/40 bg-green-50/50 hover:bg-green-50">
+            <div class="text-xs font-bold text-[#4E8D38]">2. Autocompletar Datos Válidos (#4E8D38)</div>
+            <div class="text-[11px] text-slate-600">Llena datos correctos para completar el registro.</div>
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.querySelectorAll('.enruta-logo').forEach(el => {
+      const w = el.dataset.w || 170;
+      el.innerHTML = `<img src="https://lh3.googleusercontent.com/d/1iKV8kCgcCdfeBmY4QBl-5T7NYxmXWh80" alt="EnRuta" style="width:${w}px;height:auto;display:block;margin:0 auto;" />`;
+    });
+
+    function setMode(mode) {
+      ['wireframe', 'mockup', 'prototype'].forEach(m => {
+        document.getElementById('view-' + m).classList.toggle('hidden', m !== mode);
+        document.getElementById('btn-' + m).className = m === mode
+          ? 'px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#0B192C] text-white shadow-sm'
+          : 'px-3.5 py-1.5 rounded-lg text-xs font-semibold text-slate-600';
+      });
+    }
+    function goScreen(s) {
+      ['login', 'register', 'success'].forEach(x => document.getElementById('proto-' + x).classList.toggle('hidden', x !== s));
+    }
+    function submitLogin() {
+      const ok = document.getElementById('login-email').value.includes('@') && document.getElementById('login-pass').value.length >= 6;
+      document.getElementById('login-error').classList.toggle('hidden', ok);
+      if (ok) goScreen('success');
+    }
+    function submitRegister() {
+      const validId = /^\d{6,10}$/.test(document.getElementById('reg-id').value.trim());
+      const d = document.getElementById('reg-date').value;
+      const validAge = d && (2026 - parseInt(d.split('-')[0], 10)) >= 18;
+      document.getElementById('err-id').classList.toggle('hidden', validId);
+      document.getElementById('err-date').classList.toggle('hidden', validAge);
+      document.getElementById('reg-banner').classList.toggle('hidden', validId && validAge);
+      if (validId && validAge) goScreen('success');
+    }
+    function simulateError() {
+      setMode('prototype'); goScreen('register');
+      document.getElementById('reg-name').value = 'Laura Sofía'; document.getElementById('reg-last').value = 'Martínez Rojas';
+      document.getElementById('reg-id').value = '1107-ABC'; document.getElementById('reg-date').value = '2012-09-22';
+      submitRegister();
+    }
+    function simulateValid() {
+      setMode('prototype'); goScreen('register');
+      document.getElementById('reg-name').value = 'Laura Sofía'; document.getElementById('reg-last').value = 'Martínez Rojas';
+      document.getElementById('reg-id').value = '1107524890'; document.getElementById('reg-date').value = '1998-08-14';
+      submitRegister();
+    }
+  </script>
+</body>
+</html>
